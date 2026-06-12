@@ -23,4 +23,24 @@ document.addEventListener('DOMContentLoaded', function () {
             button.textContent = shouldShow ? 'Hide' : 'Show';
         });
     });
+
+    const startDateInput = document.querySelector('[data-start-date]');
+    const endDateInput = document.querySelector('[data-end-date]');
+
+    if (startDateInput && endDateInput) {
+        const updateEndDateLimit = function () {
+            endDateInput.min = startDateInput.value;
+
+            if (endDateInput.value && startDateInput.value && endDateInput.value < startDateInput.value) {
+                endDateInput.value = '';
+                endDateInput.setCustomValidity('End date cannot be earlier than the start date.');
+            } else {
+                endDateInput.setCustomValidity('');
+            }
+        };
+
+        startDateInput.addEventListener('change', updateEndDateLimit);
+        endDateInput.addEventListener('change', updateEndDateLimit);
+        updateEndDateLimit();
+    }
 });

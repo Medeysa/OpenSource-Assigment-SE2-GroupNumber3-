@@ -126,6 +126,7 @@ require_once '../includes/header.php';
                     id="start_date"
                     name="start_date"
                     value="<?php echo htmlspecialchars($start_date); ?>"
+                    data-start-date
                     required
                 >
             </div>
@@ -137,6 +138,8 @@ require_once '../includes/header.php';
                     id="end_date"
                     name="end_date"
                     value="<?php echo htmlspecialchars($end_date); ?>"
+                    min="<?php echo htmlspecialchars($start_date); ?>"
+                    data-end-date
                 >
             </div>
 
