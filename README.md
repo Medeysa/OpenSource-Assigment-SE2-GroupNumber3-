@@ -45,17 +45,17 @@ git add .
 git commit -m "Phase 1: Added project folders, homepage, README update, and gitignore"
 git commit -m "Phase 2: Added MySQL database schema and PDO connection configuration"
 git commit -m "Phase 3: Added login, logout, password verification, and session helper files"
-git commit -m "Phase 4: Added protected student registration form, validation, duplicate check, and database insert"
-git commit -m "Phase 5: Added protected student records table with database fetch and empty-state display"
-git commit -m "Phase 6: Added protected student registration-number search with prepared query and result display"
+git commit -m "Phase 4: Added protected project registration form, validation, duplicate check, and database insert"
+git commit -m "Phase 5: Added protected project records table with database fetch and empty-state display"
+git commit -m "Phase 6: Added protected project search with prepared query and result display"
 git commit -m "Design Update: Added responsive shared layout, professional styling, mobile navigation, and JavaScript interactions"
-git commit -m "Correction: Converted student management app to software project tracking system with project records, status display, and name search"
+git commit -m "Correction"
 git commit -m "Phase 7: Updated README documentation and added project date validation notes"
 ```
 
 ## Repository Link
 
-Repository link: `PASTE_PUBLIC_GITHUB_REPOSITORY_LINK_HERE`
+Repository link: `https://github.com/Medeysa/OpenSource-Assigment-SE2-GroupNumber3-.git`
 
 ## Technologies Used
 
