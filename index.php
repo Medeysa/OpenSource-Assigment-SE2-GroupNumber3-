@@ -1,7 +1,7 @@
 <?php
 require_once 'includes/session.php';
 
-$page_title = 'Student Information Management System';
+$page_title = 'Software Project Tracking System';
 $page_description = '';
 $base_path = '.';
 $active_page = 'home';
@@ -13,14 +13,15 @@ require_once 'includes/header.php';
     <section class="hero-section">
         <div class="hero-content">
             <span class="eyebrow">CP222 Open Source Assignment</span>
-            <h1>Student Information Management System</h1>
+            <h1>Software Project Tracking System</h1>
             <p>
-                Manage student records, user access, and registration details through a clean PHP and MySQL system.
+                Record software project information, monitor project status, and search projects by name
+                through a clean PHP and MySQL web application.
             </p>
             <div class="hero-actions">
                 <?php if (is_logged_in()): ?>
-                    <a class="button button-primary" href="students/add_student.php">Register Student</a>
-                    <a class="button button-secondary" href="students/view_students.php">View Records</a>
+                    <a class="button button-primary" href="projects/add_project.php">Record Project</a>
+                    <a class="button button-secondary" href="projects/view_projects.php">View Status</a>
                 <?php else: ?>
                     <a class="button button-primary" href="auth/login.php">Login to System</a>
                 <?php endif; ?>
@@ -28,16 +29,16 @@ require_once 'includes/header.php';
         </div>
         <div class="hero-panel" aria-label="System summary">
             <div>
-                <strong>Primary</strong>
-                <span>School level support</span>
+                <strong>Record</strong>
+                <span>Save project details</span>
             </div>
             <div>
-                <strong>Secondary</strong>
-                <span>Student records support</span>
+                <strong>Status</strong>
+                <span>Track project progress</span>
             </div>
             <div>
-                <strong>Secure</strong>
-                <span>Session based access</span>
+                <strong>Search</strong>
+                <span>Find projects by name</span>
             </div>
         </div>
     </section>
@@ -46,19 +47,19 @@ require_once 'includes/header.php';
         <article class="summary-card">
             <span class="card-number">01</span>
             <h2>User Access</h2>
-            <p>Login, logout, and session management protect student pages from unauthorized access.</p>
+            <p>Login, logout, and session management protect the project tracking pages.</p>
         </article>
 
         <article class="summary-card">
             <span class="card-number">02</span>
-            <h2>Student Records</h2>
-            <p>Register students and view their registration number, names, gender, and school level.</p>
+            <h2>Project Information</h2>
+            <p>Record project names, descriptions, dates, and current progress status.</p>
         </article>
 
         <article class="summary-card">
             <span class="card-number">03</span>
-            <h2>Search</h2>
-            <p>Find a student quickly using a unique registration number.</p>
+            <h2>Project Search</h2>
+            <p>Find software projects quickly using the project name.</p>
         </article>
     </section>
 </main>

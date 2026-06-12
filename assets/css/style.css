@@ -253,17 +253,17 @@ a {
 }
 
 .stacked-form,
-.student-form,
+.record-form,
 .search-form {
     display: grid;
     gap: 18px;
 }
 
-.student-form {
+.record-form {
     grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.student-form .form-actions,
+.record-form .form-actions,
 .search-form,
 .full-width {
     grid-column: 1 / -1;
@@ -281,9 +281,9 @@ label {
 }
 
 input,
-select {
+select,
+textarea {
     width: 100%;
-    min-height: 46px;
     padding: 10px 12px;
     color: var(--text);
     background: #fff;
@@ -293,11 +293,26 @@ select {
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
+input,
+select {
+    min-height: 46px;
+}
+
+textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
 input:focus,
-select:focus {
+select:focus,
+textarea:focus {
     outline: none;
     border-color: var(--primary);
     box-shadow: 0 0 0 3px rgba(29, 107, 79, 0.14);
+}
+
+.full-span {
+    grid-column: 1 / -1;
 }
 
 .input-action {
@@ -496,7 +511,7 @@ button {
 
     .hero-section,
     .summary-grid,
-    .student-form,
+    .record-form,
     .search-form,
     .details-grid {
         grid-template-columns: 1fr;

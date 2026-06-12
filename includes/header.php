@@ -10,8 +10,8 @@
     <header class="app-header">
         <nav class="navbar">
             <a class="brand" href="<?php echo $base_path; ?>/index.php">
-                <span class="brand-mark">SIMS</span>
-                <span>Student System</span>
+                <span class="brand-mark">SPTS</span>
+                <span>Project Tracker</span>
             </a>
 
             <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
@@ -22,9 +22,9 @@
 
             <div class="nav-links">
                 <a class="<?php echo $active_page === 'home' ? 'active' : ''; ?>" href="<?php echo $base_path; ?>/index.php">Home</a>
-                <a class="<?php echo $active_page === 'add' ? 'active' : ''; ?>" href="<?php echo $base_path; ?>/students/add_student.php">Register</a>
-                <a class="<?php echo $active_page === 'view' ? 'active' : ''; ?>" href="<?php echo $base_path; ?>/students/view_students.php">Students</a>
-                <a class="<?php echo $active_page === 'search' ? 'active' : ''; ?>" href="<?php echo $base_path; ?>/students/search_student.php">Search</a>
+                <a class="<?php echo $active_page === 'add' ? 'active' : ''; ?>" href="<?php echo $base_path; ?>/projects/add_project.php">Record Project</a>
+                <a class="<?php echo $active_page === 'view' ? 'active' : ''; ?>" href="<?php echo $base_path; ?>/projects/view_projects.php">Status</a>
+                <a class="<?php echo $active_page === 'search' ? 'active' : ''; ?>" href="<?php echo $base_path; ?>/projects/search_project.php">Search</a>
                 <?php if (is_logged_in()): ?>
                     <a class="nav-logout" href="<?php echo $base_path; ?>/auth/logout.php">Logout</a>
                 <?php else: ?>

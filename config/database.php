@@ -1,7 +1,7 @@
 <?php
 // Database connection settings.
 $host = 'localhost';
-$database = 'student_management_system';
+$database = 'software_project_tracking_system';
 $username = 'root';
 $password = '';
 

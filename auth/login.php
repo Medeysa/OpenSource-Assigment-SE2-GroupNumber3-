@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 $page_title = 'Login';
-$page_description = 'Access the student information management dashboard.';
+$page_description = 'Access the software project tracking dashboard.';
 $base_path = '..';
 $active_page = 'login';
 
