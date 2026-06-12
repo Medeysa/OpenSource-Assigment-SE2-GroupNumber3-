@@ -48,6 +48,7 @@ require_once '../includes/header.php';
                             <th>Start Date</th>
                             <th>End Date</th>
                             <th>Created At</th>
+                            <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -59,6 +60,9 @@ require_once '../includes/header.php';
                                 <td><?php echo htmlspecialchars($project['start_date']); ?></td>
                                 <td><?php echo htmlspecialchars($project['end_date'] ?? 'Not set'); ?></td>
                                 <td><?php echo htmlspecialchars($project['created_at']); ?></td>
+                                <td>
+                                    <a class="button button-secondary" href="edit_project.php?id=<?php echo htmlspecialchars($project['id']); ?>" style="padding: 6px 12px; min-height: auto;">Edit</a>
+                                </td>
                             </tr>
                         <?php endforeach; ?>
                     </tbody>

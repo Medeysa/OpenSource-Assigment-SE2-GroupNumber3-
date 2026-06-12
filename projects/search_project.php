@@ -82,6 +82,10 @@ require_once '../includes/header.php';
                         <dd><?php echo htmlspecialchars($project['end_date'] ?? 'Not set'); ?></dd>
                     </div>
                 </dl>
+
+                <div style="margin-top: 20px; display: flex; justify-content: flex-end;">
+                    <a class="button button-secondary" href="edit_project.php?id=<?php echo htmlspecialchars($project['id']); ?>">Edit Project</a>
+                </div>
             </div>
         <?php endforeach; ?>
     </section>
