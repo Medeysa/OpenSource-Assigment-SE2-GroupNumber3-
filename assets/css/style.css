@@ -1005,3 +1005,22 @@ button {
         transform: translateY(0);
     }
 }
+
+.auth-helper {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--muted);
+}
+
+.auth-helper a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 4px;
+}
+
+.auth-helper a:hover {
+    text-decoration: underline;
+    color: var(--text);
+}

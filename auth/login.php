@@ -3,6 +3,11 @@ require_once '../config/database.php';
 require_once '../includes/session.php';
 
 $error = '';
+$success = '';
+
+if (isset($_GET['registered']) && $_GET['registered'] === '1') {
+    $success = 'Account created successfully! You can now log in.';
+}
 
 if (is_logged_in()) {
     header('Location: ../index.php');
@@ -52,6 +57,10 @@ require_once '../includes/header.php';
             <div class="alert alert-error"><?php echo htmlspecialchars($error); ?></div>
         <?php endif; ?>
 
+        <?php if ($success !== ''): ?>
+            <div class="alert alert-success"><?php echo htmlspecialchars($success); ?></div>
+        <?php endif; ?>
+
         <form action="login.php" method="POST" class="stacked-form">
             <div class="form-group">
                 <label for="username">Username</label>
@@ -68,6 +77,9 @@ require_once '../includes/header.php';
 
             <button class="button button-primary full-width" type="submit">Login</button>
         </form>
+        <div class="auth-helper">
+            Don't have an account? <a href="register.php">Register here</a>
+        </div>
     </section>
 </main>
 
