@@ -32,6 +32,7 @@
                     <a class="nav-logout" href="<?php echo $base_path; ?>/auth/logout.php">Logout</a>
                 <?php else: ?>
                     <a class="<?php echo $active_page === 'login' ? 'active' : ''; ?>" href="<?php echo $base_path; ?>/auth/login.php">Login</a>
+                    <a class="<?php echo $active_page === 'register' ? 'active' : ''; ?>" href="<?php echo $base_path; ?>/auth/register.php">Register</a>
                 <?php endif; ?>
                 <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle theme">
                     <span class="theme-toggle-icon">🌙</span>
