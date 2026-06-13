@@ -72,22 +72,22 @@ require_once '../includes/header.php';
         <form action="register.php" method="POST" class="stacked-form">
             <div class="form-group">
                 <label for="username">Username</label>
-                <input type="text" id="username" name="username" autocomplete="username" value="<?php echo htmlspecialchars($username ?? ''); ?>" required>
+                <input type="text" id="username" name="username" autocomplete="username" value="<?php echo htmlspecialchars($username ?? ''); ?>" placeholder="JaneDoe" required>
             </div>
 
             <div class="form-group password-field">
                 <label for="password">Password</label>
                 <div class="input-action">
-                    <input type="password" id="password" name="password" autocomplete="new-password" required>
-                    <button class="ghost-button password-toggle" type="button" data-target="password">Show</button>
+                    <input type="password" id="password" name="password" autocomplete="new-password" placeholder="***" required>
+                    <button class="ghost-button password-toggle" type="button" data-target="password"><i class="fa-regular fa-eye"></i></button>
                 </div>
             </div>
 
             <div class="form-group password-field">
                 <label for="confirm_password">Confirm Password</label>
                 <div class="input-action">
-                    <input type="password" id="confirm_password" name="confirm_password" autocomplete="new-password" required>
-                    <button class="ghost-button password-toggle" type="button" data-target="confirm_password">Show</button>
+                    <input type="password" id="confirm_password" name="confirm_password" autocomplete="new-password" placeholder="***" required>
+                    <button class="ghost-button password-toggle" type="button" data-target="confirm_password"><i class="fa-regular fa-eye"></i></button>
                 </div>
             </div>
 

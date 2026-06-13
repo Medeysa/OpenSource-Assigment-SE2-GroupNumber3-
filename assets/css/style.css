@@ -593,6 +593,76 @@ a {
     font-size: 1rem;
 }
 
+@media (max-width: 768px) {
+    .table-wrapper {
+        border: none;
+        background: none;
+        box-shadow: none;
+    }
+    
+    .data-table,
+    .data-table thead,
+    .data-table tbody,
+    .data-table tr,
+    .data-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .data-table {
+        min-width: 100%;
+    }
+
+    .data-table thead {
+        display: none;
+    }
+
+    .data-table tbody tr {
+        background: var(--surface-soft);
+        border: 1px solid var(--surface-border);
+        border-radius: var(--radius);
+        margin-bottom: 16px;
+        padding: 16px;
+        box-shadow: var(--shadow);
+    }
+    
+    .light-theme .data-table tbody tr {
+        background: #ffffff;
+        border-color: rgba(0, 0, 0, 0.08);
+    }
+
+    .data-table td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+        border-bottom: 1px solid var(--surface-border);
+        text-align: right;
+    }
+
+    .light-theme .data-table td {
+        border-bottom-color: rgba(0, 0, 0, 0.05);
+    }
+
+    .data-table td:last-child {
+        border-bottom: 0;
+        padding-bottom: 0;
+        margin-top: 10px;
+        justify-content: flex-end;
+    }
+
+    .data-table td::before {
+        content: attr(data-label);
+        font-weight: 700;
+        color: var(--muted);
+        text-align: left;
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+}
+
+
 /* Status Pills */
 .status-pill {
     display: inline-flex;
@@ -726,9 +796,36 @@ textarea:focus {
 }
 
 .input-action {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 10px;
+    position: relative;
+    display: block;
+}
+
+.input-action input {
+    width: 100%;
+    padding-right: 48px;
+}
+
+.input-action .password-toggle {
+    position: absolute;
+    right: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: var(--muted);
+    min-height: auto;
+    padding: 12px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: none;
+    transition: var(--transition);
+}
+
+.input-action .password-toggle:hover {
+    color: var(--text);
+    background: none;
 }
 
 /* Button Styling */

@@ -6,7 +6,8 @@
     <title><?php echo htmlspecialchars($page_title); ?></title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="<?php echo $base_path; ?>/assets/css/style.css?v=<?php echo time(); ?>">
 </head>
 <body>
@@ -35,7 +36,7 @@
                     <a class="<?php echo $active_page === 'register' ? 'active' : ''; ?>" href="<?php echo $base_path; ?>/auth/register.php">Register</a>
                 <?php endif; ?>
                 <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle theme">
-                    <span class="theme-toggle-icon">🌙</span>
+                    <span class="theme-toggle-icon"><i class="fa-solid fa-moon"></i></span>
                 </button>
             </div>
         </nav>

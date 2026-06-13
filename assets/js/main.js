@@ -13,16 +13,16 @@ document.addEventListener('DOMContentLoaded', function () {
         
         // Sync icon state on page load
         if (document.documentElement.classList.contains('light-theme')) {
-            if (icon) icon.textContent = '☀️';
+            if (icon) icon.innerHTML = '<i class="fa-solid fa-sun"></i>';
         } else {
-            if (icon) icon.textContent = '🌙';
+            if (icon) icon.innerHTML = '<i class="fa-solid fa-moon"></i>';
         }
 
         themeToggle.addEventListener('click', function () {
             const isLight = document.documentElement.classList.toggle('light-theme');
             localStorage.setItem('theme', isLight ? 'light' : 'dark');
             if (icon) {
-                icon.textContent = isLight ? '☀️' : '🌙';
+                icon.innerHTML = isLight ? '<i class="fa-solid fa-sun"></i>' : '<i class="fa-solid fa-moon"></i>';
             }
         });
     }
@@ -48,7 +48,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
             const shouldShow = input.type === 'password';
             input.type = shouldShow ? 'text' : 'password';
-            button.textContent = shouldShow ? 'Hide' : 'Show';
+            
+            const icon = button.querySelector('i');
+            if (icon) {
+                if (shouldShow) {
+                    icon.className = 'fa-regular fa-eye-slash';
+                } else {
+                    icon.className = 'fa-regular fa-eye';
+                }
+            } else {
+                button.textContent = shouldShow ? 'Hide' : 'Show';
+            }
         });
     });
 
