@@ -54,13 +54,13 @@ require_once '../includes/header.php';
                     <tbody>
                         <?php foreach ($projects as $project): ?>
                             <tr>
-                                <td><strong><?php echo htmlspecialchars($project['project_name']); ?></strong></td>
-                                <td><?php echo htmlspecialchars($project['description']); ?></td>
-                                <td><span class="status-pill status-<?php echo strtolower(str_replace(' ', '-', $project['status'])); ?>"><?php echo htmlspecialchars($project['status']); ?></span></td>
-                                <td><?php echo htmlspecialchars($project['start_date']); ?></td>
-                                <td><?php echo htmlspecialchars($project['end_date'] ?? 'Not set'); ?></td>
-                                <td><?php echo htmlspecialchars($project['created_at']); ?></td>
-                                <td>
+                                <td data-label="Project Name"><strong><?php echo htmlspecialchars($project['project_name']); ?></strong></td>
+                                <td data-label="Description"><?php echo htmlspecialchars($project['description']); ?></td>
+                                <td data-label="Status"><span class="status-pill status-<?php echo strtolower(str_replace(' ', '-', $project['status'])); ?>"><?php echo htmlspecialchars($project['status']); ?></span></td>
+                                <td data-label="Start Date"><?php echo htmlspecialchars($project['start_date']); ?></td>
+                                <td data-label="End Date"><?php echo htmlspecialchars($project['end_date'] ?? 'Not set'); ?></td>
+                                <td data-label="Created At"><?php echo htmlspecialchars($project['created_at']); ?></td>
+                                <td data-label="Actions">
                                     <a class="button button-secondary" href="edit_project.php?id=<?php echo htmlspecialchars($project['id']); ?>" style="padding: 6px 12px; min-height: auto;">Edit</a>
                                 </td>
                             </tr>
