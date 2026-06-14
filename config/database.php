@@ -3,7 +3,7 @@
 $host = 'localhost';
 $database = 'software_project_tracking_system';
 $username = 'root';
-$password = 'Jay9Nine!';
+$password = '';
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$database;charset=utf8mb4", $username, $password);
